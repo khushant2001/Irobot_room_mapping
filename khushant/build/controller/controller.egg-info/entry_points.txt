@@ -1,0 +1,5 @@
+[console_scripts]
+move = controller.move:main
+new_move = controller.new:main
+test = controller.test:main
+

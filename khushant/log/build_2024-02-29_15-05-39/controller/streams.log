@@ -1,0 +1,27 @@
+[0.376s] Invoking command in '/home/controlslab/khushant/src/controller': PYTHONPATH=/home/controlslab/khushant/build/controller/prefix_override:/home/controlslab/khushant/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller build --build-base /home/controlslab/khushant/build/controller/build install --record /home/controlslab/khushant/build/controller/install.log --single-version-externally-managed
+[0.508s] running egg_info
+[0.508s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[0.508s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[0.508s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[0.509s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[0.509s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[0.510s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[0.510s] adding license file 'LICENSE'
+[0.510s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[0.510s] running build
+[0.510s] running build_py
+[0.510s] copying controller/move.py -> /home/controlslab/khushant/build/controller/build/lib/controller
+[0.511s] running install
+[0.511s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.511s]   warnings.warn(
+[0.511s] running install_lib
+[0.512s] copying /home/controlslab/khushant/build/controller/build/lib/controller/move.py -> /home/controlslab/khushant/install/controller/lib/python3.10/site-packages/controller
+[0.512s] byte-compiling /home/controlslab/khushant/install/controller/lib/python3.10/site-packages/controller/move.py to move.cpython-310.pyc
+[0.513s] running install_data
+[0.513s] running install_egg_info
+[0.515s] removing '/home/controlslab/khushant/install/controller/lib/python3.10/site-packages/controller-0.0.0-py3.10.egg-info' (and everything under it)
+[0.515s] Copying ../../build/controller/controller.egg-info to /home/controlslab/khushant/install/controller/lib/python3.10/site-packages/controller-0.0.0-py3.10.egg-info
+[0.515s] running install_scripts
+[0.528s] Installing move script to /home/controlslab/khushant/install/controller/lib/controller
+[0.528s] writing list of installed files to '/home/controlslab/khushant/build/controller/install.log'
+[0.545s] Invoked command in '/home/controlslab/khushant/src/controller' returned '0': PYTHONPATH=/home/controlslab/khushant/build/controller/prefix_override:/home/controlslab/khushant/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller build --build-base /home/controlslab/khushant/build/controller/build install --record /home/controlslab/khushant/build/controller/install.log --single-version-externally-managed

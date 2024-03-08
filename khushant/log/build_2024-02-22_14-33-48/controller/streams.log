@@ -1,0 +1,25 @@
+[0.317s] Invoking command in '/home/controlslab/khushant/build/controller': PYTHONPATH=/home/controlslab/khushant/build/controller/prefix_override:/home/controlslab/khushant/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/controlslab/khushant/build/controller/build --no-deps install_data
+[0.431s] running develop
+[0.434s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.434s]   warnings.warn(
+[0.435s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.435s]   warnings.warn(
+[0.457s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[0.457s]   warnings.warn(
+[0.457s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[0.457s]   warnings.warn(
+[0.495s] running egg_info
+[0.496s] writing controller.egg-info/PKG-INFO
+[0.496s] writing dependency_links to controller.egg-info/dependency_links.txt
+[0.496s] writing entry points to controller.egg-info/entry_points.txt
+[0.496s] writing requirements to controller.egg-info/requires.txt
+[0.496s] writing top-level names to controller.egg-info/top_level.txt
+[0.497s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[0.497s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[0.498s] running build_ext
+[0.498s] Creating /home/controlslab/khushant/install/controller/lib/python3.10/site-packages/controller.egg-link (link to .)
+[0.498s] Installing move script to /home/controlslab/khushant/install/controller/lib/controller
+[0.498s] 
+[0.498s] Installed /home/controlslab/khushant/build/controller
+[0.498s] running install_data
+[0.512s] Invoked command in '/home/controlslab/khushant/build/controller' returned '0': PYTHONPATH=/home/controlslab/khushant/build/controller/prefix_override:/home/controlslab/khushant/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/controlslab/khushant/build/controller/build --no-deps install_data

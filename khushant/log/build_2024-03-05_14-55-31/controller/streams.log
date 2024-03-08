@@ -1,0 +1,23 @@
+[0.345s] Invoking command in '/home/controlslab/khushant/build/controller': PYTHONPATH=/home/controlslab/khushant/build/controller/prefix_override:/home/controlslab/khushant/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/controlslab/khushant/build/controller/build --no-deps install_data
+[0.473s] running develop
+[0.473s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.473s]   warnings.warn(
+[0.474s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.474s]   warnings.warn(
+[0.545s] running egg_info
+[0.545s] writing controller.egg-info/PKG-INFO
+[0.545s] writing dependency_links to controller.egg-info/dependency_links.txt
+[0.545s] writing entry points to controller.egg-info/entry_points.txt
+[0.545s] writing requirements to controller.egg-info/requires.txt
+[0.545s] writing top-level names to controller.egg-info/top_level.txt
+[0.546s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[0.546s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[0.547s] running build_ext
+[0.547s] Creating /home/controlslab/khushant/install/controller/lib/python3.10/site-packages/controller.egg-link (link to .)
+[0.548s] Installing move script to /home/controlslab/khushant/install/controller/lib/controller
+[0.548s] Installing new_move script to /home/controlslab/khushant/install/controller/lib/controller
+[0.548s] Installing test script to /home/controlslab/khushant/install/controller/lib/controller
+[0.548s] 
+[0.548s] Installed /home/controlslab/khushant/build/controller
+[0.548s] running install_data
+[0.562s] Invoked command in '/home/controlslab/khushant/build/controller' returned '0': PYTHONPATH=/home/controlslab/khushant/build/controller/prefix_override:/home/controlslab/khushant/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/controlslab/khushant/build/controller/build --no-deps install_data
