@@ -11,7 +11,10 @@ import numpy as np
 from sensor_msgs.msg import Imu
 import math
 
-obstacles = []
+obstacles = np.array([
+    [0]
+])
+i = 0
 class move(Node):
     def __init__(self):
         super().__init__("Moving")
@@ -22,6 +25,7 @@ class move(Node):
             history=QoSHistoryPolicy.KEEP_LAST,
             depth=5
         )
+        self.initial_position = np.array([[0,0]])
         self.dock_sub = self.create_subscription(DockStatus, "/robot_1/dock_status",self.check_dock, qos_profile=qos_profil)
         self.dock_status = None
         self.haz_sub = self.create_subscription(detect, "/robot_1/hazard_detection", self.hazard_detect,qos_profile = qos_profil)
@@ -33,8 +37,15 @@ class move(Node):
         self.imu_sub = self.create_subscription(Odometry, "/robot_1/odom", self.imu_sense, qos_profile = qos_profil)
     
     def imu_sense(self, imu_msg:Odometry):
-        self.get_logger().info("Getting Odometry")
-        self.imu_status = [imu_msg.pose.pose.position[0], imu_msg.pose.pose.position[1]] 
+        global i
+        #self.get_logger().info("Getting Odometry")
+        self.imu_status = np.array([
+            [1*math.floor(imu_msg.pose.pose.position._x), 1*math.floor(imu_msg.pose.pose.position._y)]]) 
+        if i == 0:
+            self.initial_position[0,0] = self.imu_status[0,0]
+            self.initial_position[0,1] = self.imu_status[0,1]
+            i = i + 1
+        obstacle_detection(self.imu_status - self.initial_position)
     def ir_sense(self,ir_msg:ir):
         #self.get_logger().info("Value = ")
         self.ir_status[0] = ir_msg.readings[0].value
@@ -54,24 +65,24 @@ class move(Node):
    
     def move_func(self):
         msg = Twist()
-        print(self.ir_status)
+        #print(self.ir_status)
         if self.dock_status == False:
             msg.linear.x = .1
             self.move.publish(msg)
             if max(self.ir_status[0:3])<100:
-                print("1")
+                #print("1")
                 msg.linear.x = 0.0
                 msg.angular.z = .2
                 self.move.publish(msg)
                 msg.linear.x = .1
                 self.move.publish(msg)
                 if self.ir_status[0] <10:
-                    print("2")
+                    #print("2")
                     msg.linear.x = 0.03
                     msg.angular.z = .4
                     self.move.publish(msg)
             elif max(self.ir_status) > 350 or self.hazard_status == 1:
-                print("3")
+                #print("3")
                 #self.get_logger().info("Moving the thing")
                 msg.linear.x = 0.0
                 #self.move.publish(msg) 
@@ -81,8 +92,29 @@ class move(Node):
                 #else:
                     #msg.angular.z = 0.8
                 self.move.publish(msg)                   
-                time.sleep(1)
+                #time.sleep(1)
                 
+def obstacle_detection(points):
+    points[0,1] = abs(points[0][1])
+    points[0,1] = abs(points[0][1])
+    global obstacles
+    #print(obstacles)
+    #print("New")
+    o_shape = obstacles.shape
+    #print(o_shape)
+    if points[0,1] > o_shape[0]-1:
+        print("hi")
+        new_column = np.zeros((1,o_shape[1]))
+        obstacles = np.vstack([obstacles, new_column])
+
+    if points[0,1] > o_shape[1]-1:  
+        print("hi2")
+        new_row = np.zeros((o_shape[0]+1,1))
+        obstacles = np.hstack([obstacles, new_row])
+    
+    print(obstacles)
+    print("New")
+    obstacles[points[0,0]][points[0,1]] = 1
 def quaternion_to_euler(q):
     """
     Convert quaternion to Euler angles (roll, pitch, yaw).
