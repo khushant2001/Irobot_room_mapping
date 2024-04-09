@@ -1,6 +1,6 @@
 # Implementing a PID controller on Irobot Create for wall following while mapping the space!
 
-https://github.com/khushant2001/Irobot_room_mapping/assets/70731991/6eef20a8-ffd1-4ec5-879d-03e078c9682e
+https://github.com/khushant2001/Irobot_room_mapping/assets/70731991/6a5a6e49-d5f5-4838-867d-0f577ad81ebe
 
 For this project, Robotic Operating System (ROS 2, distro = 'humble') is used to implement room mapping through Irobot Create. The documentation for the Irobot Create ROS structure can be found [here](https://iroboteducation.github.io/create3_docs/) and the Ros2 documentation can be found [here](https://docs.ros.org/en/humble/index.html). A traditional pub sub method is used to communicate with the Irobot. Following is the list of topics used to communicate with the robot:
 
