@@ -16,7 +16,8 @@ For this project, Robotic Operating System (ROS 2, distro = 'humble') is used to
 - Twist: geometry_msgs.msg // send the velocity commands to the Irobot
 
 All of these communications occur through the designed node. Rqt graph of the pub-sub structure used is shown below: 
-![image](https://github.com/khushant2001/Irobot_room_mapping/assets/70731991/5fc4d79c-f085-487c-ba64-f0599f68747d)
+![image](https://github.com/khushant2001/Irobot_room_mapping/assets/70731991/e5783494-741d-43c6-95aa-a00cf5879dfc)
+
 
 
 ## 1. Designing the controller for wall following:
